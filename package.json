@@ -28,7 +28,6 @@
     "sass": "^1.97.2"
   },
   "dependencies": {
-    "browser-sync": "^3.0.4",
-    "gulp-concat": "^2.6.1"
+    "browser-sync": "^3.0.4"
   }
 }
