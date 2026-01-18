@@ -4,6 +4,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
+const cleanCSS = require('gulp-clean-css');
 
 const paths = {
   html: 'src/html/*.html',
@@ -20,6 +21,7 @@ function styles() {
         paths.scss
     ])
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(cleanCSS())
     .pipe(gulp.dest('dist/css'));
 }
 
