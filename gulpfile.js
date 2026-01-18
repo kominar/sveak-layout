@@ -1,3 +1,5 @@
+const ghPages = require('gh-pages');
+const path = require('path');
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
@@ -52,3 +54,8 @@ exports.default = gulp.series(
   gulp.parallel(styles, html, images, uploads),
   serve
 );
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './dist'), cb);
+}
+exports.deploy = deploy;

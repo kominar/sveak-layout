@@ -20,6 +20,7 @@
   "homepage": "https://github.com/kominar/sveak-layout#readme",
   "devDependencies": {
     "browser-sync": "^3.0.3",
+    "gh-pages": "^6.3.0",
     "gulp": "^5.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^6.0.1",
