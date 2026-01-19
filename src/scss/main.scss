@@ -1,24 +1,13 @@
 @use 'sass:color';
-$primary-color: #000000;
-$bg-color: #80c8bd;
-$bg-color2: #95D9FF;
-$bg-color3: #D6BDFF;
-$white-color: #ffffff;
-$border-color: #cccccc;
-
-$bp-max-sm: 479px;
-$bp-min-sm: 480px;
-$bp-max-md: 639px;
-$bp-min-md: 640px;
-$bp-max-lg: 1023px;
-$bp-min-lg: 1024px;
-$bp-max-xl: 1279px;
-$bp-min-xl: 1280px;
+@import '_variables';
 
 :root { 
-    * {
-        box-sizing: border-box;
-    }
+  font-size: 16px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
 }
 
 body {
@@ -40,7 +29,7 @@ body {
     flex-direction: column;    
     flex-grow: 1;
 
-    .wrapper:first-child:last-child {
+    & > .wrapper:first-child:last-child {
         display: flex;
         flex-direction: column;            
         flex-grow: 1;
@@ -145,10 +134,10 @@ body {
     transition: background-color 300ms;
 
     &:hover {
-        background-color: color.scale(#FF39EB, $alpha: -90%);
+        background-color: color.scale($cta-color, $alpha: -90%);
     }
     &.active {
-        background-color: color.scale(#FF39EB, $alpha: -75%);
+        background-color: color.scale($cta-color, $alpha: -75%);
     }
 
     &__img {
