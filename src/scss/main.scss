@@ -53,6 +53,7 @@ body {
         @media (max-width: $bp-max-lg) {
             .sidebar {
                 transform: translate(0, 0);
+                opacity: 1;
             }
 
             .menu-switcher {
@@ -243,6 +244,7 @@ body {
     top: 0;
     bottom: 0;
     width: 100%;
+    opacity: 0;
     background-color: $bg-color3;
     z-index: 95;
     transform: translate(-100%, 0);
@@ -252,6 +254,7 @@ body {
         width: 260px;
     }
     @media (min-width: $bp-min-lg) {
+        opacity: 1;
         width: 308px;
         border-right: 1px solid $border-color;
         background-color: transparent;
