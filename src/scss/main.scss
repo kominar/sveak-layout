@@ -13,7 +13,7 @@
 body {
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; 
     color: $primary-color;
     align-items: stretch;
     min-height: 100vh;
@@ -29,7 +29,7 @@ body {
     flex-direction: column;    
     flex-grow: 1;
 
-    & > .wrapper:first-child:last-child {
+    & > .wrapper {
         display: flex;
         flex-direction: column;            
         flex-grow: 1;
